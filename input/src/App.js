@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 
+const App = (props) => {
 
-const App = () => {
+  const obj = {
+    name:"Tom",
+    age:24,
+
+  }
+
+  const {name,age} = obj;
+
+  console.log(name);
+
   return (
-   <div>
-
+      <div>
+        {age}
       </div>
   )
 }
