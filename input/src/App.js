@@ -1,22 +1,39 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-const App = (props) => {
+class App extends React.Component {
 
-  const obj = {
-    name:"Tom",
-    age:24,
+  constructor(props){
+    super (props);
+    this.state = {name:""}
+  };
 
+
+  handleClick　= (props) => {
+    this.setState({name: props.target.value});
+  };
+  handleSubmit　=(props)=> {
+    props.preventDefault(props);
+    console.log(this.state.name);
+  };
+
+
+
+  render(){
+    return(
+        <div>
+
+          <form onSubmit={this.handleSubmit}>
+            <input value={this.state.name} type="text" onChange={this.handleClick}/>
+            <input type="submit" />
+          </form>
+          {this.state.name}
+
+        </div>
+    )
   }
 
-  const {name,age} = obj;
 
-  console.log(name);
 
-  return (
-      <div>
-        {age}
-      </div>
-  )
 }
 
 
