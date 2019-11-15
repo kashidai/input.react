@@ -17,7 +17,7 @@ class App extends React.Component {
     return(
         <div>
           <form>
-            <input value={this.state.name} type="text" onChange={this.handleClick}/>
+            <input type="text" onChange={this.handleClick}/>
           </form>
           {this.state.name}
 
