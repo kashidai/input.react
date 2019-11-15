@@ -24,7 +24,7 @@ class App extends React.Component {
 
           <form onSubmit={this.handleSubmit}>
             <input value={this.state.name} type="text" onChange={this.handleClick}/>
-            <input type="submit" />
+
           </form>
           {this.state.name}
 
