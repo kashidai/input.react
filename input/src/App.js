@@ -11,20 +11,13 @@ class App extends React.Component {
   handleClick　= (props) => {
     this.setState({name: props.target.value});
   };
-  handleSubmit　= (props) => {
-    props.preventDefault(props);
-    console.log(this.state.name);
-  };
-
 
 
   render(){
     return(
         <div>
-
-          <form onSubmit={this.handleSubmit}>
+          <form>
             <input value={this.state.name} type="text" onChange={this.handleClick}/>
-
           </form>
           {this.state.name}
 
