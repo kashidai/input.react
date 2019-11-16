@@ -8,8 +8,9 @@ class App extends React.Component {
   };
 
 
-  handleClick　= (props) => {
-    this.setState({name: props.target.value});
+  handleClick　= (e) => {
+      console.log(e.target.type);
+    this.setState({name: e.target.value});
   };
 
 
